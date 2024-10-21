@@ -1,0 +1,15 @@
+<robot name="test_robot">
+  <link name="base_link"/> #基準となる空のリンク
+
+  <joint name="body_joint" type="fixed"> #ジョイントの設定
+    <parent link="base_link"/> #ジョイントの親を指定
+    <child  link="body_link"/> #ジョイントの子を指定
+  </joint>
+  <link name="body_link"> #リンクの設定
+    <visual>
+      <geometry>
+        <box size="0.1 0.2 0.4"/> #見た目を長方形に設定
+      </geometry>
+    </visual>
+  </link>
+</robot>
